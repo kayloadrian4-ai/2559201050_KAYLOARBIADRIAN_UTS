@@ -1,0 +1,141 @@
+:root {
+    --warna-utama: #6F4E37;
+    --warna-kedua: #D9B38C;
+    --warna-terang: #FFF8F0;
+    --warna-teks: #333333;
+    --warna-gelap: #4A3728;
+    --jarak: 1.5rem;
+    --lengkung: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--warna-teks);
+    background-color: var(--warna-terang);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigasi — Flexbox */
+.navbar {
+    background-color: var(--warna-utama);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    padding: 0.5rem;
+    border-radius: var(--lengkung);
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--warna-gelap);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 5%;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(111, 78, 55, 0.8), rgba(74, 55, 40, 0.9)), url('../img/hero.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    border-radius: var(--lengkung);
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--warna-kedua);
+    color: var(--warna-gelap);
+    padding: 0.8rem 2rem;
+    border-radius: var(--lengkung);
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #C99A6E;
+    transform: translateY(-3px);
+}

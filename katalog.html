@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog — Kedai Kopi Hangat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">☕ Kedai Kopi Hangat</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="katalog.html" class="active">Katalog</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Daftar Menu & Harga</h2>
+            <p>Pilih kopi favoritmu di sini</p>
+        </section>
+
+        <section class="filter-section">
+            <label>Filter Kategori: </label>
+            <select id="filter-kategori">
+                <option value="semua">Semua</option>
+                <option value="kopi">Kopi</option>
+                <option value="non-kopi">Non-Kopi</option>
+                <option value="makanan">Makanan</option>
+            </select>
+        </section>
+
+        <section class="katalog" id="daftar-produk">
+            <!-- Produk akan dimuat oleh JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kedai Kopi Hangat. Semua Hak Dilindungi.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
